@@ -1,0 +1,31 @@
+{
+  "name": "tauri-plugin-sqlite-store",
+  "version": "0.1.0",
+  "author": "Sylvain DANGIN",
+  "description": "Add SQLite persistence to your Tauri applications and access any SQLite database on the computer.",
+  "browser": "webview-dist/index.js",
+  "main": "webview-dist/index.js",
+  "types": "webview-dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c ./webview-src/rollup.config.js",
+    "prepublishOnly": "yarn build",
+    "pretest": "yarn build",
+    "doc": "typedoc --tsconfig ./webview-src/tsconfig.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "11.1.0",
+    "@types/node": "^18.15.11",
+    "rollup": "2.79.1",
+    "typedoc": "^0.24.4",
+    "typedoc-plugin-markdown": "^3.15.1",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.0",
+    "sqlite-tablegenerator": "https://github.com/Sylvaner/SQLite-TableGenerator",
+    "tslib": "^2.1.0"
+  }
+}

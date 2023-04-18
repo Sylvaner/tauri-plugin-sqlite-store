@@ -1,0 +1,18 @@
+[package]
+name = "tauri-plugin-sqlite-store"
+version = "0.1.0"
+authors = [ "Sylvain DANGIN" ]
+description = "Add SQLite persistence to your Tauri applications and access any SQLite database on the computer."
+edition = "2021"
+rust-version = "1.60"
+exclude = ["/example", "/webview-dist", "/webview-src", "/node_modules"]
+
+[dependencies]
+tauri = { version = "1.2" }
+serde = "1.0"
+thiserror = "1.0"
+serde_json = "1.0"
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+
+[build-dependencies]
+tauri-build = { version = "1.2" }
